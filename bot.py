@@ -26,11 +26,11 @@ def send_welcome(message):
 
 @bot.message_handler(regexp="кот")
 def cats(message):
-    rand_n = random.randint(1, 5)
+    rand_n = random.randint(1, 15)
     with open('data/cats/cat'+str(rand_n)+'.jpg', 'rb') as img:
         bot.send_photo(message.chat.id, img)
     with open('data/audio/audio1.ogg', 'rb') as song:
-        bot.send_voice(message.chat.id, song, "<b>Толстый кот</b>", parse_mode='html')
+        bot.send_voice(message.chat.id, song, "<b>Нейро кот</b>", parse_mode='html')
     #bot.reply_to(message, "<b>Толстый кот</b>", parse_mode='html')
 
 @bot.message_handler(regexp="Кактус")
